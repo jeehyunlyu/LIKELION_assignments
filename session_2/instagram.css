@@ -1,0 +1,239 @@
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+body {
+    background-color: #FAFAFA;
+    margin: 0px
+}
+
+.head_bar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid lightgray;
+}
+
+/* Container Box */
+
+.head_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+    margin-top: 5px;
+}
+
+.logo > img {
+    width: 103px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search i {
+    color: gray;
+    position: relative;
+    left: 90px;
+}
+
+.search input {
+    width: 215px;
+    height: 20px;
+    background-color: #FAFAFA;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    color: lightgray;
+    text-align: center;
+}
+
+.navigate {
+    width: 178px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigate > img {
+    width: 22px;
+    border-radius: 50%;    
+}
+
+/* Profile */
+
+.profile {
+    margin-top: 30px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.profile_content {
+    float: left;
+}
+
+
+.basic {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic p {
+    font-family: 'Segoe UI';
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.basic button {
+    background-color: #FAFAFA;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 5px 9px;
+}
+
+.information {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.introduction {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Contents */
+
+.tab {
+    border-top: 1px solid lightgray;
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.posts, .igtv, .saved, .tagged {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.posts, .igtv, .saved {
+    margin-right: 60px;
+}
+
+.igtv, .saved, .tagged {
+    color: gray;
+}
+
+.posts {
+    border-top: 1px solid black;
+}
+
+.tab p {
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.posts_contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.posts_contents img {
+    width: 219px;
+    height: 219px;
+    margin-bottom: 23px;
+    
+}
+
+/* Footer */
+
+footer {
+    height: 105px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitemap {
+    width: 450px;
+    color: #00376B;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #8E8E8E;
+}

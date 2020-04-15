@@ -1,0 +1,154 @@
+
+@font-face {
+    font-family: "Nanum Square_B";
+    src: url('./NanumSquare_acB.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: "Nanum Square_R";
+    src: url('./NanumSquare_acR.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: "Nanum Square_L";
+    src: url('./NanumSquare_acL.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: "BM Dohyeon";
+    src: url('./BMDOHYEON.otf') format('truetype')
+}
+
+h1 {
+    font-family: "BM Dohyeon";
+}
+
+header {
+    background-color: rgb(105, 72, 196);
+    text-align: center;
+    color: white;
+    line-height: 200px;
+    font-size: large;
+    height: 200px;
+}
+
+header p {
+    color: white;
+    opacity: 50%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: rgb(192, 176, 236);
+}
+
+nav p {
+    font-family: "Nanum Square_R";
+    font-size: small;
+    color: rgb(105, 72, 196);
+    display: inline-block;
+    margin-left: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.date {
+    font-family: "Nanum Square_L";
+    font-size: small;
+    color: gray;
+    text-align: right;
+}
+
+.salutation {
+    font-family: "Nanum Square_R";
+    text-align: center;
+    line-height: 35px;
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 100px;
+    width: 500px;
+    padding: 15px;
+    border: 2px dotted rgb(105, 72, 196);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: "BM Dohyeon";
+    color: rgb(105, 72, 196);
+    margin-top: 40px;
+    float: left;
+}
+
+#profile img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 200px;
+    margin-top: 60px;
+    float: left;
+}
+
+#profile ul {
+    font-family: "Nanum Square_R";
+    float: left;
+    margin-top: 80px;
+    margin-left: 10px;
+    line-height: 30px;
+    font-size: small;
+}
+
+#activity h2 {
+    font-family: "BM Dohyeon";
+    color: rgb(105, 72, 196);
+}
+
+#activity {
+    display: grid;
+    grid-template-rows: 250px 250px;
+    grid-template-columns: repeat(3, 250px);
+    grid-gap: 20px;
+    grid-auto-rows: 500px;
+    grid-auto-flow: row;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+    order: initial;
+    float: left;
+    flex-direction: row;
+}
+
+.activity {
+    box-shadow: 0 1px 1px 0 gray;
+    width: 200px
+}
+
+#activity p {
+    font-family: "Nanum Square_R";
+    font-size: small;
+    text-align: center;
+}
+
+#activity img {
+    width: 200px;
+    height: 200px;
+}
+
+#contact {
+    float: left;
+    margin-top: 40px;
+}
+
+#contact h3 {
+    font-family: "BM Dohyeon";
+    color: rgb(105, 72, 196);
+}
+
+#contact p {
+    font-family: "Nanum Square_R";
+}
