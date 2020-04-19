@@ -1,0 +1,520 @@
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+body {
+    background-color: #FAFAFA;
+    margin: 0px
+}
+
+.head_bar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid lightgray;
+}
+
+/* Container Box */
+
+.head_container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+    height: 54px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+    margin-top: 5px;
+}
+
+.logo > img {
+    width: 103px;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search i {
+    color: gray;
+    position: relative;
+    left: 90px;
+}
+
+.search input {
+    width: 215px;
+    height: 20px;
+    background-color: #FAFAFA;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    color: lightgray;
+    text-align: center;
+}
+
+.navigate {
+    width: 178px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navigate > img {
+    width: 22px;
+    border-radius: 50%;    
+}
+
+/* Profile */
+
+.profile {
+    margin-top: 30px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.profile_content {
+    float: left;
+}
+
+
+.basic {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.basic p {
+    font-family: 'Segoe UI';
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.basic button {
+    background-color: #FAFAFA;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 5px 9px;
+}
+
+.information {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.posts_number, .follower, .following {
+    display: flex;
+    flex-direction: row;
+}
+
+.information_mobile {
+    display: none;
+}
+
+.introduction {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Contents */
+
+.tab {
+    border-top: 1px solid lightgray;
+    height: 40px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+tab i {
+    font-size: 18px;
+}
+
+.posts, .igtv, .saved, .tagged {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.posts, .igtv, .saved {
+    margin-right: 60px;
+}
+
+.igtv, .saved, .tagged {
+    color: gray;
+}
+
+.posts {
+    border-top: 1px solid black;
+}
+
+.tab p {
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.posts_contents {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.posts_contents img {
+    width: 219px;
+    height: 219px;
+    margin-bottom: 23px;
+    
+}
+
+/* Footer */
+
+footer {
+    height: 105px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sitemap {
+    width: 450px;
+    color: #00376B;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #8E8E8E;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 425px) {
+    body {
+        background-color: #FAFAFA;
+        margin: 0px
+    }
+    
+    .head_bar {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    /* Container Box */
+    
+    .head_container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Header */
+    
+    .header {
+        margin-left: 20px;
+        margin-right: 20px;
+        height: 54px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        height: 30px;
+        margin-top: 5px;
+    }
+    
+    .logo > img {
+        width: 103px;
+    }
+    
+    .search {
+        display: none;
+    }
+    
+    .navigate {
+        width: 180px;
+        height: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .navigate > img {
+        width: 22px;
+        border-radius: 50%;    
+    }
+    
+    /* Profile */
+    
+    .profile {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    
+    .profile_image {
+        height: 80px;
+    }
+
+    .profile img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .profile_content {
+        float: left;
+    }
+    
+    .basic {
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .basic p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-family: 'Segoe UI';
+        font-size: 28px;
+        font-weight: 300;
+        margin-right: 15px;
+    }
+    
+    .basic button {
+        display: none;
+    }
+
+    .edit_profile button {
+        font-size: 14px;
+        width: 110%;
+        height: 30px;
+        margin-top: 15px;
+        background-color: #FAFAFA;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        padding: 5px 9px;
+    }
+    
+    .introduction {
+        position: relative;
+        top: 20px;
+        right: 105px;
+        height: 40px;
+        float: none;
+    }
+    
+    .introduction p {
+        font-size: 14px;
+    }
+
+    .information {
+        display: none;
+    }
+
+    .information_mobile{
+        margin-top: 30px;
+        font-size: 14px;
+        width: 100%;
+        height: 60px;
+        border-top: 1px solid lightgray;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .information_mobile p {
+        color: gray;
+        margin: 2px;
+    }
+
+    .information_mobile strong {
+        color: black;
+        word-wrap: break-word;
+    }
+
+    .posts_number, .follower, .following {
+        width: 33.3%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
+
+    /* Contents */
+    
+    .tab {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        height: 44px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    tab i {
+        font-size: 24px;
+    }
+
+    .posts, .igtv, .saved, .tagged {
+        width: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .igtv, .saved, .tagged {
+        color: gray;
+    }
+    
+    .posts {
+        color: rgb(78, 162, 240);
+        width: 24px auto;
+        border: none;
+        margin-left: 20px;
+    }
+    
+    .tagged {
+        margin-right: 20px;
+    }
+
+    .tab p {
+        display: none;
+    }
+    
+    .posts_contents {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+    
+    .posts_contents img {
+        width: 31%;
+        height: auto;
+        margin-bottom: 3%;
+        
+    }
+    
+    /* Footer */
+    
+    footer {
+        height: 50px;
+        margin-top: 50px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .sitemap {
+        width: 320px;
+        color: #00376B;
+        margin-right: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .sitemap h6 {
+        font-size: 12px;
+        margin: 5px 5px;
+    }
+
+    .copyright {
+        color: #8E8E8E;
+    }
+
+    .copyright p {
+        margin: 5px 0;
+        font-weight: 600;
+    }
+}
+    
