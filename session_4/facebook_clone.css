@@ -1,0 +1,433 @@
+/* font setting */
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot);
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+
+/* Mobile Container */
+
+body {
+    margin: 0 auto;
+    background-color: rgb(238, 238, 238);
+}
+
+.mobile_container {
+    margin: 0 auto;
+    width: 425px;
+    height: auto;
+    background-color: rgb(218, 218, 222);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Container */
+
+.top_container {
+    background-color: white;
+    padding: 20px 12px 12px 12px;
+    margin-bottom: 10px;
+}
+
+header {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.header_buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header_button {
+    width: 38px;
+    height: 38px;
+    background-color: rgb(235, 235, 235);
+    margin-left: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.header_button i {
+    height: 24px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+.stories {
+    display: flex;
+    flex-direction: row;
+}
+
+.story {
+    width: 25%;
+    height: 185px;
+    margin-right: 5px;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.a {
+    background-image: url(https://media.karousell.com/media/photos/profiles/2016/08/06/winifredlwy_1470478087.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 120% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.a i {
+    color: rgb(34, 119, 247);
+    font-size: 36px;
+    text-align: center;
+    position: relative;
+    top: 19px
+}
+
+.a h4 {
+    text-align: center;
+    
+}
+
+.b {
+    background-image: url(koreanenglishman_story.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.b h4 {
+    color: white;
+    font-size: small;
+    margin: 5px 5px;
+}
+
+.make_story {
+    background-color: rgb(250, 250, 250);
+}
+
+.story_photo img {
+    width: 50px;
+}
+
+.following_profile img {
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px;
+    border-radius: 50%;
+    border: 3px solid rgb(34, 119, 247);
+}
+
+/* Story Upload */
+
+.story_upload {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.current {
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgb(228, 227, 227);
+}
+
+.profile {
+    width: 45px;
+    height: 45px;
+    background-image: url(https://media.karousell.com/media/photos/profiles/2016/08/06/winifredlwy_1470478087.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.current p {
+    font-size: 18px;
+    margin: 0 0;
+}
+
+.story_type {
+    display: flex;
+    flex-direction: row;
+}
+
+.live, .photo, .checkin {
+    width: 33.3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.live, .photo {
+    border-right: 1px solid rgb(228, 227, 227);
+}
+
+.live p, .photo p, .checkin p {
+    font-size: 15px;
+    margin: 10px 3px;
+}
+
+.live i {
+    color: rgb(240, 74, 88);
+    font-size: 24px;
+}
+
+.photo i {
+    color: rgb(136, 209, 103);
+    font-size: 18px;
+}
+
+.checkin i {
+    color: rgb(226, 66, 146);
+    font-size: 22px;
+}
+
+/* Timeline */
+
+.timeline {
+    background-color: white;
+    padding: 15px 12px 0px 12px;
+    margin-bottom: 10px;
+}
+
+.timeline_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page_profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.page_photo {
+    width: 45px;
+    height: 45px;
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/22730250_1340753676028698_4435767130919621925_n.jpg?_nc_cat=1&_nc_sid=09cbfe&_nc_ohc=-AHLPYX1djEAX_VXbZC&_nc_ht=scontent-gmp1-1.xx&oh=1c5ecca62a3631b35cba48ea2db718fb&oe=5ECE25F8);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.post_info h3 {
+    margin: 0 0;
+}
+
+.post_info p {
+    margin: 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    color: gray;
+}
+
+.timeline_photo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.timeline_photo_1 {
+    width: 80%;
+    height: 460px;
+    margin-right: 5px;
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/94975799_3343928035711242_60625301629042688_o.jpg?_nc_cat=1&_nc_sid=730e14&_nc_ohc=CsXfc11HtPMAX8vNdMD&_nc_ht=scontent-gmp1-1.xx&oh=5aedc3b5b8044c5d2db50b7a23973432&oe=5ECD1DBB);
+    background-repeat: no-repeat;
+    background-size: 200% auto;
+    background-position: center;
+}
+
+.timeline_photo_row2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.timeline_photo_2, .timeline_photo_3, .timeline_photo_4 {
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.timeline_photo_2 {
+    margin-bottom: 5px;
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/94612539_3343928055711240_9121097990679822336_o.jpg?_nc_cat=1&_nc_sid=730e14&_nc_ohc=78t9qkH0PXUAX8Gex4M&_nc_ht=scontent-gmp1-1.xx&oh=4a2489be86d7e0c8a33c6116550c8957&oe=5ECCA16E);
+
+}
+
+.timeline_photo_3 {
+    margin-bottom: 5px;
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/94741143_3343928045711241_5757382249876029440_o.jpg?_nc_cat=1&_nc_sid=730e14&_nc_ohc=c-xC8U61vsEAX9-De2m&_nc_ht=scontent-gmp1-1.xx&oh=ce19146939562f80c70431ffef16854b&oe=5ECB3E59);
+}
+
+.timeline_photo_4 {
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.0-9/94655106_3343928145711231_1952966456064868352_o.jpg?_nc_cat=109&_nc_sid=730e14&_nc_ohc=cO6nsIe1bmYAX-wLhjX&_nc_ht=scontent-gmp1-1.xx&oh=0ff54c502c41af2e8c4b3e359befc241&oe=5ECBE062);
+}
+
+.reaction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reaction p, i {
+    color: rgb(116, 114, 114);
+}
+
+.likes {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.likes i {
+    font-size: 12px;
+    color: white;
+}
+
+.likes_1, .likes_2 {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.likes_1 {
+    background-color: rgb(34, 119, 247);
+}
+
+.likes_2 {
+    background-color: rgb(240, 74, 88);
+    position: relative;
+    right: 5px;
+}
+
+.comments_shares {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.comments_shares p {
+    margin-right: 5px;
+}
+
+.my_profile {
+    width: 18px;
+    height: 18px;
+    background-image: url(https://media.karousell.com/media/photos/profiles/2016/08/06/winifredlwy_1470478087.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 50%;
+}
+
+.my_reaction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid rgb(228, 227, 227);
+}
+
+.my_reaction p, i {
+    font-size: 13px;
+    color: rgb(116, 114, 114);
+    margin-right: 5px;
+}
+
+.like, .comment, .share {
+    width: 33.3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.like p, .comment p, .share p {
+    margin: 10px 0;
+}
+
+.navigation_bar {
+    position: fixed;
+    bottom: 0;
+    width: 425px;
+    height: 30px;
+    padding: 10px 0;
+    background-color: white;
+    color: rgb(116, 114, 114);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation_bar i {
+    font-size: 30px;
+}
+
+.selected i {
+    color: rgb(34, 119, 247);
+    border-top: 3px solid rgb(34, 119, 247);
+}
