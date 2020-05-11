@@ -10,6 +10,7 @@ writer.writerow(["title", "img_src", "author", "publisher", "price", "summary"])
 final_result = []
 
 for i in range(19):
+    
     print(f"{i+1}번째 페이지 크롤링 중..")
     book_html = requests.get(f"http://www.yes24.com/24/category/bestseller?CategoryNumber=001&sumgb=03&PageNumber={i+1}")
     book_soup = BeautifulSoup(book_html.text, "html.parser")

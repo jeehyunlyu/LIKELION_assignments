@@ -1,7 +1,7 @@
 def extract_info(book_list):
     result = []
     for i in range(len(book_list)):
-        if i % 2 == 1:
+        if i % 2 == 0:
             text_info = book_list[i].find("td", {"class" : "goodsTxtInfo"})
             aupu = text_info.find("div", {"class" : "aupu"}).find_all("a")
             p_element = text_info.find_all("p")
@@ -15,18 +15,24 @@ def extract_info(book_list):
                 publisher = aupu[2]
             else:
                 author = aupu[0]
-                publisher = aupu[1]
-        
+                try: 
+                    publisher = aupu[1]
+                except:
+                    publisher = "none"
         else:
-            summary = book_list[i].find("p", {"class" : "read"}).string.strip()
+            try:
+                summary = book_list[i].find("p", {"class" : "read"}).string.strip()
+            except:
+                summary = "none"
 
-        book_info = {
-            "title" : title,
-            "img_src" : img_src,
-            "author" : author,
-            "publisher" : publisher,
-            "price" : price,
-            "summary" : summary,
-        }
-        result.append(book_info)
+            book_info = {
+                "title" : title,
+                "img_src" : img_src,
+                "author" : author,
+                "publisher" : publisher,
+                "price" : price,
+                "summary" : summary,
+            }
+            result.append(book_info)
+
     return result
