@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count</title>
+</head>
+<body>
+    <div class="container">
+        <div class="introduction">
+            <h1>글자 수 세기</h1>
+            <p>글자를 입력해보세요!</p>
+        </div>
+        <form action="{% url 'result' %}" method="POST">{% csrf_token %}
+            <textarea name="text" cols="70" rows="20"></textarea>
+            <br>
+            <input type="submit" value="제출하기">
+        </form>
+    </div>
+</body>
+</html>

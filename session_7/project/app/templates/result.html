@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Count Result</title>
+</head>
+<body>
+    <div class="container">
+        <div class="introduction">
+            <h1>글자 수 세기</h1>
+            <p>결과를 확인하세요:)</p>
+        </div>
+        <div class="result">
+            <div class="input_text">
+                {{text}}
+            </div>
+            <div class="count_result">
+                <p><strong>공백 포함 : </strong>{{total_len}}</p>
+                <p><strong>공백 제외 : </strong>{{no_blank_len}}</p> 
+                <p><strong>단어 수: </strong>{{word_count}}</p> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
