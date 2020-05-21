@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <div class="container">
+        <h1>할 일 수정하기</h1>
+        <h2>{{ todo.title }}</h2>
+        <form method="POST">
+            {%  csrf_token %}
+            <div class="todo_edit">
+                <p>Title<input type="text" name="title" value="{{ todo.title }}" placeholder="{{ todo.title }}"></p>
+                <p>Content<input type="text" name="content" value="{{ todo.content }}" placeholder="{{ todo.content }}"></p>
+                <p>Due Date<input type="datetime-local" name="duedate"></p>
+            </div>
+            <button type="submit">작성하기</button>
+        </form>
+    </div>
+</body>
+</html>

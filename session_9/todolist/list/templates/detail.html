@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Detail</title>
+</head>
+<body>
+    <div class="container">
+        <h1>할 일 보기</h1>
+        <h2>{{ todo.title }}</h2>
+        <p>{{ todo.content }}</p>
+        <p>{{ todo.duedate }}</p>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'edit' todo.pk %}">Edit</a>
+        <a href="{% url 'delete' todo.pk %}">Delete</a>
+    </div>
+</body>
+</html>
