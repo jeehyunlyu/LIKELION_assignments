@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}제목{% endblock title %}</title>
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    <h1>류지현의 To-Do-List</h1>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

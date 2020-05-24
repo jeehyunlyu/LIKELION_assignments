@@ -1,0 +1,15 @@
+html {
+    background-color: rgb(238, 239, 250);
+    font-family: 'NanumsquareRound', 'Noto Sans CJK KR';
+}
+
+h1 {
+    height: 100px;
+    background-color: rgb(145, 171, 235);
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 auto;
+}
