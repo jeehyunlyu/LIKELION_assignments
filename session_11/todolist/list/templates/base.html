@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "google-signin-client_id"content = "112068927114-vui2db5ip1nogj87h3uce8f66n9mogdl.apps.googleusercontent.com">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <title>{% block title %}제목{% endblock title %}</title>
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    <h1>류지현의 To-Do-List</h1>
+    <div class="nav-bar">
+        <a class="nav-item" href="{% url 'home' %}">HOME</a>
+        {% if user.is_authenticated %}
+        <div class="nav-item"><p>안녕하세요, {{ user.username }}님</p></div>
+        <a class="nav-item" href="{% url 'mypage' %}">마이페이지</a>
+        <a class="nav-item" href="{% url 'logout' %}">로그아웃</a>
+        {% else %}
+        <a class="nav-item" href="{% url 'login' %}">로그인</a>
+        <a class="nav-item" href="{% url 'signup' %}">회원가입</a>
+        {% endif %}
+    </div>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

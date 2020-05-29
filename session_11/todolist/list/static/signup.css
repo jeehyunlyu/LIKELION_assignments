@@ -1,0 +1,63 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: rgb(145, 171, 235);
+    font-size: 25px;
+    margin: 25px 0;
+}
+
+form {
+    width: 450px;
+    height: 200px;
+    background-color: rgb(160, 183, 241);
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    margin: 10px auto;
+}
+
+button {
+    width: 150px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(108, 134, 199);
+    border: 0px;
+    padding: 5px 7px;
+    border-radius: 5px;
+    float: right;
+    margin: 5px auto;
+}
+
+form a {
+    width: 135px;
+    height: 16px;    
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(48, 48, 48);
+    padding: 5px 7px;
+    border-radius: 5px;
+    float: right;
+    margin: 3px auto;
+}
+
+.kakao {
+    background-color: rgb(250, 230, 120);
+}
+
+.google {
+    background-color: rgb(255, 157, 155);
+}
