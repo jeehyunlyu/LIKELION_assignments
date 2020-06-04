@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Edit{% endblock title %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <h2>할 일 수정하기</h2>
+    <h3>{{ todo.title }}</h3>
+    <form method="POST">
+        {%  csrf_token %}
+        <div class="todo_edit">
+            <p>Title<input type="text" name="title" value="{{ todo.title }}" placeholder="{{ todo.title }}"></p>
+            <p>Content<input type="text" name="content" value="{{ todo.content }}" placeholder="{{ todo.content }}"></p>
+            <p>Due Date<input type="datetime-local" name="duedate"></p>
+        </div>
+        <button type="submit">작성하기</button>
+    </form>
+</div>
+{% endblock content %}

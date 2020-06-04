@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Detail{% endblock title %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <h2>할 일 보기</h2>
+    <h6>[작성자] {{ todo.author }}</h6>
+    <div class="todo">           
+        <h3>{{ todo.title }}</h3>
+        <p>{{ todo.content }}</p>
+        <p>{{ todo.duedate }}</p>
+        <img src="{{ todo.img }}" alt="{{ todo.title }}">
+    </div>
+        
+    <h6>댓글 보기</h6>
+    <div class="comments">
+        {% for comment in todo.comments.all %}
+        <div class="written_comment">
+            <li>{{ comment.content }}</li>
+            <p>[작성자: {{ comment.author }}]</p>
+            {% if user.is_authenticated and comment.author.pk == user.pk %}
+            <a href="{% url 'delete_comment' todo.pk comment.pk %}">댓글 삭제</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% if user.is_authenticated %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="content" placeholder="댓글을 입력해주세요.">
+            <button type="submit">댓글 쓰기</button>
+        </form>
+        {% endif %}
+    </div>
+
+    <div class="button">
+        <a href="{% url 'home' %}">Home</a>
+        {% if user.is_authenticated and todo.author.pk == user.pk %}
+        <a href="{% url 'edit' todo.pk %}">Edit</a>
+        <a href="{% url 'delete' todo.pk %}">Delete</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}

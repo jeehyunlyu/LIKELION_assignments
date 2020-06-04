@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}My Page{% endblock title %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mypage.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <h2>마이페이지</h2>
+    <p>[ {{ user.username }}님이 작성하신 글 ]</p>
+    <div class="my_todos">   
+        <h3>내가 쓴 글</h3> 
+        {% for todo in todos %}   
+        {% if user.is_authenticated and todo.author.pk == user.pk %}  
+        <div class="my_todo_list">
+            <div class="info_1">
+                <h4><a href="{% url 'detail' todo.pk %}">{{ todo.title }}</a></h4>
+                <p>{{ todo.duedate }}</p>
+            </div>
+            <div class="info_2">
+                <h6>{{ todo.content }}</h6>
+                <p>{{ todo.duedate|timeuntil }} left</p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="my_comments"> 
+        <h3>내가 쓴 댓글</h3>       
+        {% for todo in todos %}
+        {% for comment in todo.comments.all %}   
+        {% if user.is_authenticated and comment.author.pk == user.pk %}
+        <div class="my_comment_list">
+            <p><strong>[댓글] </strong>{{ comment.content }}</p>
+            <h4>[게시물] <a href="{% url 'detail' todo.pk %}">{{ todo.title }}</a></h4>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

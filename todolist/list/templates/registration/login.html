@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock title %}
+
+{% load socialaccount %}
+{% providers_media_js %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <h2>로그인</h2>
+    {% if error %}
+    <h3 style="color: red;">{{ error }}</h3>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="아이디">
+        <input type="password" name="password" placeholder="비밀번호">
+        <button type="submit">로그인</button>
+        <a class="kakao" href="{% provider_login_url 'kakao' %}">KAKAO 로그인</a>
+        <a class="google" href="{% provider_login_url 'google' %}">GOOGLE 로그인</a>
+    </form>
+</div>
+{% endblock content %}

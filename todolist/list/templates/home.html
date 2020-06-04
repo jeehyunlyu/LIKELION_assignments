@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <h2>To Do List</h2>
+    {% for todo in todos %}
+    <div class="to_do_list">
+        <div class="info_1">
+            <h3><a href="{% url 'detail' todo.pk %}">{{ todo.title }}</a></h3>
+            <p>{{ todo.duedate }}</p>
+        </div>
+        <div class="info_2">
+            <h6>{{ todo.content }}</h6>
+            <p>{{ todo.duedate|timeuntil }} left</p>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="create">
+        <a href="{% url 'new' %}">할 일 만들기</a>
+    </div>
+</div>
+{% endblock content %}
