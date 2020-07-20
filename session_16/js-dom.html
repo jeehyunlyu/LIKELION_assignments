@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS-DOM</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1 class="now"></h1>
+    <script>
+        const clockContainer = document.querySelector(".now");
+
+        const getTime = () => {
+            const date = new Date();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            clockContainer.innerText = `${hours < 10 ? `0${hours}` : hours}시 ${
+                minutes < 10 ? `0${minutes}` : minutes}분 ${
+                seconds < 10 ? `0${seconds}` : seconds}초`;
+        }
+
+        const initTime = () => {
+            getTime();
+            setInterval(getTime, 1000);
+        }
+
+        initTime();
+
+    </script>
+    <script>
+        const getRandomColor = () => {
+            const hexa = '0123456789abcdef';
+            let hexa_color = '#';
+            for (let i=0; i<6; i++) {
+                hexa_color += hexa[Math.floor(Math.random() * 16)];
+                console.log(hexa_color)
+            }
+            return hexa_color;
+        }
+
+        setInterval(() => {
+            document.querySelector('body').style.background = getRandomColor();
+        }, 100);
+    </script>
+</body>
+</html>
