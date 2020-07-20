@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="wordcount.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <div class="container">
+        <div class="introduction">
+            <h1>글자 수 세기</h1>
+            <p>글자를 입력해보세요!</p>
+        </div>
+        <textarea type="text" class="textInput" cols="60" rows="20"></textarea>
+        <div class="count_result">
+            <p><strong>공백 포함 : </strong></p>
+            <p class="textWithSpace">0</p>
+            <p><strong>공백 제외 : </strong></p>
+            <p class="textWithoutSpace">0</p> 
+        </div>
+    </div>
+    <script>
+        const textInput = document.querySelector('.textInput');
+        const textWithSpace = document.querySelector('.textWithSpace');
+        const textWithoutSpace = document.querySelector('.textWithoutSpace');
+
+        const initCount = () => {
+            const text = textInput.value;
+            textWithSpace.innerText = text.length;
+            textWithoutSpace.innerText = text.replace(/\s/ig, "").length;
+        }
+
+        textInput.addEventListener('keyup', (event) => {
+            initCount();
+        });
+    </script>
+</body>
+</html>
