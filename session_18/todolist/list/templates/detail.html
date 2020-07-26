@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}Detail{% endblock title %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="container">
+    <h2>할 일 보기</h2>
+    <h6>[작성자] {{ todo.author }}</h6>
+    <div class="todo">           
+        <h3>{{ todo.title }}</h3>
+        <p>{{ todo.content }}</p>
+        <p>{{ todo.duedate }}</p>
+    </div>
+        
+    <h6>댓글 보기</h6>
+    <div class="comments">
+        {% for comment in todo.comments.all %}
+        <div class="written_comment">
+            <li>{{ comment.content }}</li>
+            <p>[작성자: {{ comment.author }}]</p>
+            {% if user.is_authenticated and comment.author.pk == user.pk %}
+            <a href="{% url 'delete_comment' todo.pk comment.pk %}">댓글 삭제</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        {% if user.is_authenticated %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="content" placeholder="댓글을 입력해주세요.">
+            <button type="submit">댓글 쓰기</button>
+        </form>
+        {% endif %}
+    </div>
+
+    <div class="preference">
+        {% if user.is_authenticated %}
+        <button id="like-button" onclick="like()">좋아요</button>
+        <button id="bookmark-button" onclick="bookmark()">찜하기</button>
+        {% endif %}
+        <div id="like-count">좋아요 {{ todo.likes.count }}개</div>
+        <div id="bookmark-count">찜하기 {{ todo.bookmarks.count }}개</div>
+    </div>
+
+    <div class="button">
+        <a href="{% url 'home' %}">Home</a>
+        {% if user.is_authenticated and todo.author.pk == user.pk %}
+        <a href="{% url 'edit' todo.pk %}">Edit</a>
+        <a href="{% url 'delete' todo.pk %}">Delete</a>
+        {% endif %}
+    </div>
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    const likeClicked = document.getElementById('like-button')
+    const like = () => {
+      axios.post('/like', { todo_pk: "{{ todo.pk }}" })
+        .then(response => {
+            document.getElementById('like-count').innerHTML = '좋아요 ' + response.data.like_count + '개'
+            if (response.data.like_count) {
+                likeClicked.style.color = 'red';
+            } else {
+                likeClicked.style.color = 'black';
+            }
+        })
+        .catch(err => console.error(err))
+    }
+
+    const bookmarkClicked = document.getElementById('bookmark-button')
+    const bookmark = () => {
+      axios.post('/bookmark', { todo_pk: "{{ todo.pk }}" })
+        .then(response => {
+            document.getElementById('bookmark-count').innerHTML = '찜하기 ' + response.data.bookmark_count + '개'
+            if (response.data.bookmark_count) {
+                bookmarkClicked.style.color = 'blue';
+            } else {
+                bookmarkClicked.style.color = 'black';
+            }
+        })
+        .catch(err => console.error(err))
+    }
+
+</script>
+{% endblock content %}
