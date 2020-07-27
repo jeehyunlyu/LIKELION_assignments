@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Kakao Map API</title>
     <style>
-        .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+        .wrap {position: absolute;left: 70;bottom: -40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
         .wrap * {padding: 0;margin: 0;}
         .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
         .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
@@ -20,6 +20,7 @@
         .info .link {color: #5085BB;}
     </style>
 </head>
+<script src=postcode.v2.js></script>
 <body>
     <form onsubmit="searchPlaces(); return false;">
         <input type="text" id="keyword" size="20" placeholder="키워드를 입력하세요."> 
@@ -28,14 +29,14 @@
     <hr>
     <div class="map_wrap">
         <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-        <ul id="placesList"></ul>
-        <!-- <div id="menu_wrap" class="bg_white">
-            <div id="pagination"></div>
-        </div> -->
     </div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=300ddfd1b909a2caf07de035fd04bca5&libraries=services"></script>
 
     <script>
+        document.cookie = "safeCookie1=1; SameSite=None; Secure";
+        document.cookie = "safeCookie2=2; SameSite=Lax";
+        document.cookie = "safeCookie3=3; SameSite=Strict";
+        
         // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
         var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
@@ -112,7 +113,7 @@
             // 마커에 클릭이벤트를 등록합니다
             kakao.maps.event.addListener(marker, 'click', function() {
                 // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
-                infowindow.setContent(`<div style="padding:5px;font-size:12px;">${content}</div>`);
+                infowindow.setContent(content);
                 infowindow.open(map, marker);
             });
         }
